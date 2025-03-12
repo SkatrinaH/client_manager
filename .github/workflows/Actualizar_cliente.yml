@@ -1,0 +1,16 @@
+name: Actualizar cliente
+
+on:
+  push:
+    paths:
+      - 'archivos/**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Notify team
+        run: echo "Cliente actualizado. Notificación a los miembros del equipo."
