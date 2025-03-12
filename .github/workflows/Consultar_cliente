@@ -1,0 +1,16 @@
+name: Consultar cliente
+
+on:
+  pull_request:
+    paths:
+      - 'archivos/**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Notify team
+        run: echo "Consulta de cliente realizada. Notificación a los miembros del equipo."
