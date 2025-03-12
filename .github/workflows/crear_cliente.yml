@@ -2,8 +2,8 @@ name: Crear nuevo cliente
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - 'archivos/**'
 
 jobs:
   notify:
