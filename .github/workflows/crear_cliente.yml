@@ -1,0 +1,16 @@
+name: Crear nuevo cliente
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Notify team
+        run: echo "Nuevo cliente creado. Notificación a los miembros del equipo."
